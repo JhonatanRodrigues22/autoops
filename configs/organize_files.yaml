@@ -1,0 +1,15 @@
+organize_files:
+  # Por padrão, vai organizar a pasta Downloads do usuário
+  source_dir: "${HOME}/Downloads"
+
+  # dry_run: true = simula, não cria pasta, não move nada
+  dry_run: true
+
+  others_dir: "others"
+
+  categories:
+    pdf: [".pdf"]
+    images: [".jpg", ".jpeg", ".png", ".webp", ".gif"]
+    videos: [".mp4", ".mkv", ".mov"]
+    audio: [".mp3", ".wav", ".flac"]
+    archives: [".zip", ".rar", ".7z"]
