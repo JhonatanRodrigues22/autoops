@@ -13,7 +13,13 @@ dependencies = [
 ]
 
 [project.scripts]
-autoops = "autoops.cli:app"
+autoops = "autoops.cli:entry"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
