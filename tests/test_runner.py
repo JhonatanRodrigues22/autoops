@@ -1,5 +1,6 @@
 from autoops.core.job import Job
 from autoops.core.registry import Registry
+from autoops.core.runner import run
 
 
 def test_runner_runs_existing_job_and_returns_success():
@@ -8,8 +9,6 @@ def test_runner_runs_existing_job_and_returns_success():
 
     registry = Registry()
     registry.register(Job(name="example", description="Example", handler=handler))
-
-    from autoops.core.runner import run
 
     result = run(registry, "example")
 
@@ -20,8 +19,6 @@ def test_runner_runs_existing_job_and_returns_success():
 
 def test_runner_returns_failure_when_job_not_found():
     registry = Registry()
-
-    from autoops.core.runner import run
 
     result = run(registry, "missing")
 
@@ -36,8 +33,6 @@ def test_runner_captures_exceptions_from_job_handler():
 
     registry = Registry()
     registry.register(Job(name="explode", description="Explodes", handler=handler))
-
-    from autoops.core.runner import run
 
     result = run(registry, "explode")
 

@@ -1,4 +1,5 @@
 from autoops.core.job import Job
+from autoops.core.registry import Registry
 
 
 def _noop():
@@ -6,8 +7,6 @@ def _noop():
 
 
 def test_registry_can_register_and_list_jobs():
-    from autoops.core.registry import Registry
-
     registry = Registry()
     job = Job(name="example", description="Example job", handler=_noop)
 
@@ -18,8 +17,6 @@ def test_registry_can_register_and_list_jobs():
 
 
 def test_registry_rejects_duplicate_job_names():
-    from autoops.core.registry import Registry
-
     registry = Registry()
     job1 = Job(name="dup", description="Job 1", handler=_noop)
     job2 = Job(name="dup", description="Job 2", handler=_noop)
@@ -34,8 +31,6 @@ def test_registry_rejects_duplicate_job_names():
 
 
 def test_registry_get_returns_job_or_none():
-    from autoops.core.registry import Registry
-
     registry = Registry()
     job = Job(name="example", description="Example job", handler=_noop)
     registry.register(job)

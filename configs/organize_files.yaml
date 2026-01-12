@@ -1,15 +1,154 @@
 organize_files:
-  # Por padrão, vai organizar a pasta Downloads do usuário
   source_dir: "${HOME}/Downloads"
-
-  # dry_run: true = simula, não cria pasta, não move nada
-  dry_run: true
-
+  dry_run: false
   others_dir: "others"
 
   categories:
-    pdf: [".pdf"]
-    images: [".jpg", ".jpeg", ".png", ".webp", ".gif"]
-    videos: [".mp4", ".mkv", ".mov"]
-    audio: [".mp3", ".wav", ".flac"]
-    archives: [".zip", ".rar", ".7z"]
+    documents: [
+      ".txt", ".text", ".md", ".markdown", ".rst",
+      ".rtf", ".odt", ".ott",
+      ".doc", ".docx", ".dot", ".dotx",
+      ".pages",
+      ".tex", ".ltx",
+      ".log", ".nfo", ".readme", ".license"
+    ]
+
+    pdf: [".pdf", ".xps", ".djvu", ".djv"]
+
+    spreadsheets: [
+      ".csv", ".tsv",
+      ".xls", ".xlsx", ".xlsm", ".xlt", ".xltx", ".xltm",
+      ".ods", ".ots",
+      ".numbers"
+    ]
+
+    presentations: [
+      ".ppt", ".pptx", ".pptm", ".pps", ".ppsx", ".pot", ".potx",
+      ".odp", ".otp",
+      ".key"
+    ]
+
+    ebooks: [".epub", ".mobi", ".azw", ".azw3", ".fb2", ".cbz", ".cbr"]
+
+    images: [
+      ".jpg", ".jpeg", ".png", ".webp", ".gif",
+      ".bmp", ".tif", ".tiff",
+      ".heic", ".heif",
+      ".svg", ".ico", ".icns",
+      ".raw", ".dng", ".cr2", ".cr3", ".nef", ".arw", ".orf", ".rw2"
+    ]
+
+    design: [
+      ".psd", ".psb",
+      ".ai", ".eps",
+      ".xd",
+      ".sketch",
+      ".fig",
+      ".indd",
+      ".cdr"
+    ]
+
+    audio: [
+      ".mp3", ".wav", ".flac", ".aac", ".m4a",
+      ".ogg", ".oga", ".opus",
+      ".wma", ".aiff", ".aif", ".aifc",
+      ".mid", ".midi"
+    ]
+
+    videos: [
+      ".mp4", ".m4v", ".mkv", ".mov",
+      ".avi", ".wmv", ".flv", ".f4v",
+      ".webm", ".mpeg", ".mpg", ".mpe",
+      ".3gp", ".3g2"
+    ]
+
+    subtitles: [".srt", ".ass", ".ssa", ".vtt", ".sub"]
+
+    archives: [
+      ".zip", ".rar", ".7z", ".tar",
+      ".gz", ".tgz", ".bz2", ".tbz", ".xz", ".txz",
+      ".zst",
+      ".cab",
+      ".iso", ".img", ".dmg"
+    ]
+
+    apps: [
+      ".exe", ".msi", ".msix", ".appx", ".appxbundle",
+      ".bat", ".cmd", ".com",
+      ".jar",
+      ".ps1", ".psm1", ".psd1",
+      ".vbs", ".vbe", ".jse", ".wsf", ".wsh",
+      ".sh", ".bash", ".zsh", ".fish",
+      ".apk", ".aab"
+    ]
+
+    shortcuts: [".lnk", ".url", ".webloc", ".desktop"]
+
+    code: [
+      ".py", ".pyw", ".pyi",
+      ".ipynb",
+      ".js", ".mjs", ".cjs", ".ts", ".tsx",
+      ".java", ".kt", ".kts",
+      ".c", ".h", ".cpp", ".hpp", ".cc", ".cxx",
+      ".cs",
+      ".go",
+      ".rs",
+      ".php", ".phtml",
+      ".rb",
+      ".swift",
+      ".scala",
+      ".r",
+      ".lua",
+      ".pl", ".pm",
+      ".sql"
+    ]
+
+    config: [
+      ".json", ".jsonc",
+      ".yml", ".yaml",
+      ".toml",
+      ".ini", ".cfg", ".conf",
+      ".env",
+      ".properties",
+      ".xml"
+    ]
+
+    web: [".html", ".htm", ".xhtml", ".css", ".scss", ".sass", ".less", ".map"]
+
+    data: [
+      ".parquet", ".avro", ".orc",
+      ".feather",
+      ".h5", ".hdf5",
+      ".pickle", ".pkl",
+      ".mat",
+      ".db", ".sqlite", ".sqlite3",
+      ".dbf",
+      ".ndjson"
+    ]
+
+    databases: [".dump", ".bak", ".mdb", ".accdb", ".frm", ".ibd", ".ldf", ".mdf"]
+
+    fonts: [".ttf", ".otf", ".woff", ".woff2", ".eot"]
+
+    cad_3d: [
+      ".stl", ".obj", ".fbx", ".dae", ".gltf", ".glb",
+      ".blend",
+      ".3ds",
+      ".dwg", ".dxf",
+      ".step", ".stp",
+      ".iges", ".igs",
+      ".skp"
+    ]
+
+    virtual_machines: [".vdi", ".vmdk", ".vhd", ".vhdx", ".ova", ".ovf"]
+
+    backups: [".backup", ".old", ".orig", ".tmp"]
+
+    partial_downloads: [".crdownload", ".part", ".partial"]
+
+    security: [".pem", ".crt", ".cer", ".key", ".pfx", ".p12"]
+
+    torrents: [".torrent"]
+
+    # fallback extremo
+    others: [".unknown"]
