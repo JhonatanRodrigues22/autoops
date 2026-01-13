@@ -259,5 +259,3 @@ MIT License.
 
 Developed by **Jhonatan Rodrigues**
 Focused on automation, Python tooling, and clean architecture.
-
-````
